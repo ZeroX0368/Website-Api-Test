@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Hub - Endpoint List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .api-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .api-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid #667eea;
+        }
+        
+        .api-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .api-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .api-card .endpoint {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 10px;
+            word-break: break-all;
+        }
+        
+        .api-card .description {
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .api-card .method {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .method.get { background: #d4edda; color: #155724; }
+        .method.post { background: #fff3cd; color: #856404; }
+        
+        .stats {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        
+        .stats h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        
+        .stat-item {
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .api-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 16px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .api-link:hover {
+            background: #5a67d8;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: white;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 API Hub</h1>
+            <p>Complete list of available API endpoints</p>
+        </div>
+        
+        <div class="api-grid">
+            <div class="api-card">
+                <span class="method get">GET</span>
+                <h3>Trigon Whitelist</h3>
+                <div class="endpoint">/api/trigon</div>
+                <div class="description">Generate Trigon whitelist link with random HWID for executor access.</div>
+                <a href="/api/trigon" target="_blank" class="api-link">Try API</a>
+            </div>
+            
+            <div class="api-card">
+                <span class="method get">GET</span>
+                <h3>Fluxus Link</h3>
+                <div class="endpoint">/api/fluxus</div>
+                <div class="description">Generate Fluxus executor link with 64-character HWID.</div>
+                <a href="/api/fluxus" target="_blank" class="api-link">Try API</a>
+            </div>
+            
+            <div class="api-card">
+                <span class="method get">GET</span>
+                <h3>Blox Fruits Reroll</h3>
+                <div class="endpoint">/api/rerollfruit</div>
+                <div class="description">Get random Blox Fruits reroll with chance calculation.</div>
+                <a href="/api/rerollfruit" target="_blank" class="api-link">Try API</a>
+            </div>
+            
+            <div class="api-card">
+                <span class="method get">GET</span>
+                <h3>Fake IP Generator</h3>
+                <div class="endpoint">/api/fakeip</div>
+                <div class="description">Generates a random fake IP address for testing purposes.</div>
+                <a href="/api/fakeip" target="_blank" class="api-link">Try API</a>
+            </div>
+            
+            <div class="api-card">
+                <span class="method get">GET</span>
+                <h3>Password Generator</h3>
+                <div class="endpoint">/api/password</div>
+                <div class="description">Generate secure random passwords with strength analysis.</div>
+                <a href="/api/password" target="_blank" class="api-link">Try API</a>
+            </div>
+            
+            <div class="api-card">
+                <span class="method get">GET</span>
+                <h3>Color Generator</h3>
+                <div class="endpoint">/api/color</div>
+                <div class="description">Generate random colors in HEX and RGB formats.</div>
+                <a href="/api/color" target="_blank" class="api-link">Try API</a>
+            </div>
+            
+            <div class="api-card">
+                <span class="method get">GET</span>
+                <h3>Discord Nitro</h3>
+                <div class="endpoint">/api/nitro</div>
+                <div class="description">Generate fake Discord Nitro codes for testing.</div>
+                <a href="/api/nitro" target="_blank" class="api-link">Try API</a>
+            </div>
+            
+            <div class="api-card">
+                <span class="method get">GET</span>
+                <h3>GitHub User Info</h3>
+                <div class="endpoint">/api/github/&lt;username&gt;</div>
+                <div class="description">Get comprehensive GitHub user information and statistics.</div>
+                <a href="/api/github/octocat" target="_blank" class="api-link">Try API (example)</a>
+            </div>
+            
+            <div class="api-card">
+                <span class="method get">GET</span>
+                <h3>Random Memes</h3>
+                <div class="endpoint">/api/meme</div>
+                <div class="description">Get random memes from Reddit with metadata.</div>
+                <a href="/api/meme" target="_blank" class="api-link">Try API</a>
+            </div>
+            
+            <div class="api-card">
+                <span class="method get">GET</span>
+                <h3>Pokemon Info</h3>
+                <div class="endpoint">/api/pokemon?name=</div>
+                <div class="description">Get Pokemon information including abilities, stats, and types.</div>
+                <a href="/api/pokemon?name=pikachu" target="_blank" class="api-link">Try API (example)</a>
+            </div>
+            
+            <div class="api-card">
+                <span class="method get">GET</span>
+                <span class="method post">POST</span>
+                <h3>URL Shortener</h3>
+                <div class="endpoint">/api/shorten?url=</div>
+                <div class="description">Shorten long URLs with custom short codes and redirection.</div>
+                <a href="/api/shorten?url=https://google.com" target="_blank" class="api-link">Try API (example)</a>
+            </div>
+        </div>
+        
+        <div class="stats">
+            <h2>📊 API Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">11</div>
+                    <div class="stat-label">Total Endpoints</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">GET Methods</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">POST Methods</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Uptime</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>🔗 Base URL: <strong id="baseUrl"></strong></p>
+            <p>📚 Full documentation available at each endpoint</p>
+        </div>
+    </div>
+    
+    <script>
+        // Set the base URL dynamically
+        document.getElementById('baseUrl').textContent = window.location.origin;
+    </script>
+</body>
+</html>
